@@ -1,66 +1,27 @@
-## Foundry
+# AutoMorph
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+AutoMorph is a self-repaying loan protocol that enables users to maximize their capital efficiency while minimizing debt management overhead. The protocol leverages AAVE's lending markets to generate yield on user deposits, which automatically pays down their debt positions over time.
 
-Foundry consists of:
+## Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+When users deposit WETH as collateral into AutoMorph, they receive amWETH tokens which can be freely used across DeFi protocols. Meanwhile, their original WETH collateral is deposited into AAVE's lending pool to generate yield. This yield is automatically harvested and used to reduce the user's debt position.
 
-## Documentation
+## Key Features
 
-https://book.getfoundry.sh/
+- **Self-Repaying Loans**: Your collateral works to pay off your debt automatically through yield generation
+- **Automated Management**: Chainlink Keepers update debt positions at regular intervals without requiring user intervention
+- **Capital Efficiency**: Use amWETH tokens in other DeFi protocols while your original collateral generates yield
+- **Simple UX**: Deposit WETH, receive amWETH, and let the protocol handle the rest
 
-## Usage
+## How It Works
 
-### Build
+1. Deposit WETH → Receive amWETH tokens
+2. Original WETH is deposited in AAVE to generate yield
+3. Yield automatically pays down your debt position
+4. Chainlink Keepers manage position updates
+5. Use amWETH freely while your debt decreases over time
 
-```shell
-$ forge build
-```
+## Security Note
 
-### Test
+This protocol is in development and has not been audited.
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
