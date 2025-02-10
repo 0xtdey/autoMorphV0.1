@@ -3,7 +3,7 @@ pragma solidity ^0.8.19;
 
 import "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
 import "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
-import "chainlink/contracts/src/v0.8/automation/interfaces/KeeperCompatibleInterface.sol";
+import "lib/chainlink/contracts/src/v0.8/automation/interfaces/KeeperCompatibleInterface.sol";
 import "chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 import "./token/amWETH.sol";
 
