@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import {IPool} from "lib/aave-v3-origin/src/contracts/interfaces/IPool.sol";
+import {IPool} from 'lib/aave-v3-origin/src/contracts/interfaces/IPool.sol';
 
 interface ILendingPool is IPool {
     /**
