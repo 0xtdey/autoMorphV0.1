@@ -1,6 +1,6 @@
 # AutoMorph
 
-AutoMorph is a self-repaying loan protocol that enables users to maximize their capital efficiency while minimizing debt management overhead. The protocol leverages AAVE's lending markets to generate yield on user deposits, which automatically pays down their debt positions over time.
+AutoMorph is a self-repaying loan protocol that enables users to maximize their capital efficiency while minimizing debt management overhead. The protocol leverages AAVE's lending markets to generate yield on user deposits, which automatically pays down their debt positions over time. User's are charged a fee of 0.03% on deposits, which is then deposited to Yearn finance to gain yeild.
 
 ## Overview
 
