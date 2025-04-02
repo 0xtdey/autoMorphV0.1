@@ -13,6 +13,9 @@ When users deposit WETH as collateral into AutoMorph, they receive amWETH tokens
 - **Capital Efficiency**: Use amWETH tokens in other DeFi protocols while your original collateral generates yield
 - **Simple UX**: Deposit WETH, receive amWETH, and let the protocol handle the rest
 
+## Fees 
+A 0.03% fee is applied to every deposit. This fee is automatically allocated to Yearn Finance to generate yield. The yield earned contributes to the treasury's growth, ensuring long-term sustainability and supporting further development of the platform.
+
 ## How It Works
 
 1. Deposit WETH → Receive amWETH tokens
