@@ -107,6 +107,8 @@ contract Vault is ReentrancyGuard, KeeperCompatibleInterface {
         weth.transferFrom(msg.sender, address(this), amount);
         //transfer the fees to treasury vault
         weth.transfer(address(treasuryVault), protocolFees);
+        //deposit to yearn
+        treasuryVault.depositToYearn(protocolFees);
         //update total fees
         totalFeesCollected += protocolFees;
 
@@ -115,7 +117,7 @@ contract Vault is ReentrancyGuard, KeeperCompatibleInterface {
 
         // Deposit weth into Aave to earn yield.
         weth.approve(address(aaveLendingPool), depositAmount);
-        aaveLendingPool.deposit(address(weth), depositAmount, address(this), 0);
+        aaveLendingPool.supply(address(weth), depositAmount, address(this), 0);
 
         // Initialize/update user debt (isDeposit = true).
         _updateDebt(msg.sender, depositAmount, true);
